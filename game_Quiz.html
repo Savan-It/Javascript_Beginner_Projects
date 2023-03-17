@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/Icons/icons8-ps-controller-48.png" type="image/x-icon">
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, #ecebde, #ebc2c2);
+            background-attachment: fixed;
+            padding-top: 50px;
+        }
+
+        nav {
+            background-image: linear-gradient(to top left, #c28888, #ebc2c2);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow p-1 mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JavaScript</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="library.html">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="notes.html">Notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contactForm.html">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="postman.html">Postman</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="gameHome.html">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="DND.html">Drag-drop</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" id="sTxt" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" id="sBtn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row justify-content-center my-3">
+            <div class="col-7">
+                <div class="card" style="background-color:#fff1f1;">
+                    <div class="card-body text-center">
+                        <h3 class="my-3 ">General Quiz <h4 id= "timer" class="my-3 position-absolute" style="top: 33px; right: 29px; visibility:hidden;"></h4>
+                        </h3>
+
+                        <hr>
+                        <div id="main"></div>
+                        <div id="image">
+                            <img src="/Images/quiz.jpg" class="rounded mx-auto d-block" id="image"
+                                alt="Responsive image">
+                        </div>
+                        <h5 id="h5" class="mt-md-2">Good luck!!</h5>
+                        <div class="btn btn-primary mt-3" id="startQuiz">Start Quiz</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/Js/game_Quiz.js"></script>
+</body>
+
+
+
+</html>

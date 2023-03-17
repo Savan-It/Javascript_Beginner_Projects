@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Game zone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/Icons/icons8-ps-controller-48.png" type="image/x-icon">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom right, #ecebde, #ebc2c2);
+            background-attachment: fixed;
+            padding-top: 50px;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-image: linear-gradient(to top left, #c28888, #ebc2c2);
+
+        }
+
+        .card {
+            background-color: #fff1f1;
+        }
+        .arrow{
+            cursor: pointer;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow p-1 mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JavaScript</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="library.html">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="notes.html">Notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contactForm.html">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="postman.html">Postman</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="gameHome.html">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="DND.html">Drag-drop</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" id="sTxt" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" id="sBtn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <dav class="container ">
+        <div class="row justify-content-center" id="slider">
+
+            <div class="col-auto arrow my-auto">
+                <i class="fa fa-angle-left" style="font-size: 35px; color: rgb(0, 0, 0);" onclick="plusSlides(-1)"
+                    id="leftArrow" aria-hidden="true"></i>
+            </div>
+            <div class="card col-5 me-2" style="width: 18rem;">
+                <img src="/Images/word.jpg" class="card-img-top my-2" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Word Scramble</h5>
+                    <p class="card-text">Word Scramble is a challenging vocabulary game for kids. This game is
+                        designed to help kids practice their spelling and learn new words. In this, kids have to look at
+                        the picture and identify the word.</p>
+                    <a href="/game/Word Scramble/index.html" class="btn btn-primary">start</a>
+                </div>
+            </div>
+            <div class="card col-5" style="width: 18rem;">
+
+                <img src="/Images/quiz.jpg" class="card-img-top my-2" style="height: 175px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Quiz Game</h5>
+                    <p class="card-text">A quiz is a form of game or mind sport in which players attempt to answer
+                        questions correctly on one or several specific topics. brief assessment
+                        in education and knowledge, abilities, or skills.</p>
+                    <a href="/game/quiz/quiz.html" class="btn btn-primary">start</a>
+                </div>
+            </div>
+            <div class="col-auto arrow my-auto">
+                <i class="fa fa-angle-right" style="font-size: 35px; color: rgb(0, 0, 0);" onclick="plusSlides(1)"
+                    id="rightArrow" aria-hidden="true"></i>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-auto">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </dav>
+    <script src="/Js/gameHome.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

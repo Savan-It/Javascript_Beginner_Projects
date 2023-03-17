@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>magic Book Library</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="shortcut icon" href="/Icons/icons8-books-48.png" type="image/x-icon" />
+
+  <style>
+    body {
+      background-image: linear-gradient(to bottom right, #ecebde, #ebc2c2);
+      background-attachment: fixed;
+      padding-top: 65px;
+    }
+
+    nav {
+      background-image: linear-gradient(to top left, #c28888, #ebc2c2);
+    }
+
+    .page-link {
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow p-1 mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">JavaScript</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="library.html">Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="notes.html">Notes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="contactForm.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="postman.html">Postman</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="gameHome.html">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="DND.html">Drag-drop</a>
+        </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" id="sTxt" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" id="sBtn" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-3">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 ">
+        <div class="row">
+          <div class="col">
+            <h2>Magical Library</h2>
+          </div>
+        </div>
+        <div class="row">
+          <hr />
+        </div>
+        <div class="row">
+          <div class="col">
+            <form class=" g-3" id="submitForm">
+              <div class="row pb-md-3 pb-3">
+                <div class="col">
+                  <label for="bookName" class="form-label">Book name</label>
+                  <input type="text" class="form-control" id="bookName" placeholder="enter more than 2 characters" />
+                </div>
+              </div>
+              <div class="row pb-md-3 pb-3">
+                <div class="col">
+                  <label for="Auther" class="form-label">Author</label>
+                  <input type="text" class="form-control" id="auther" placeholder="enter more than 2 characters" />
+                </div>
+              </div>
+              <div class="row pb-md-3 pb-3">
+                <div class="col-12 col-md-4">
+                  <label for="Type" class="form-label">Type</label>
+                  <select id="type" class="form-select">
+                    <option value="">select</option>
+                    <option value="business">business</option>
+                    <option value="comedy">comedy</option>
+                    <option value="lifestyle">lifestyle</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row pb-md-3 pb-3">
+                <div class="col">
+                  <button type="submit" id="addBtn" class="btn btn-success">
+                    Add book
+                  </button>
+                  <button type="submit" id="updateBtn" class="btn btn-primary">
+                    update book
+                  </button>
+                </div>
+              </div>
+              <div class="mt-1" id="msg"></div>
+            </form>
+          </div>
+        </div>
+
+
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div id="mainClass">
+                <div class="d-flex my-6 align-items-end">
+                  <h2 class="col align-self-start">Your book</h2>
+                  <h6 class="me-md-3 me-2">Per page</h6>
+                  <div class="col-auto">
+                    <select name="perPageItem" id="perPageItem" class="form-select">
+                      <option selected>4</option>
+                      <option>6</option>
+                      <option>8</option>
+                      <option>10</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table my-2" id="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sr.</th>
+                        <th scope="col">Book name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="note"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="pagination justify-content-end" id="pagination"></ul>
+      </div>
+      <div class="col text-end">
+        <a href="notes.html" class="btn btn-warning " role="button">Todo Notes-></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- <script src="mian.js"></script> -->
+  <script src="/Js/LibraryES6.js"></script>
+</body>
+
+</html>

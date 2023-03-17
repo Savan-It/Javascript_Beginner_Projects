@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to postman
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/Icons/icons8-postal-48.png" type="image/x-icon">
+    <link rel="stylesheet" href="/Css/prism.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ecebde, #ebc2c2);
+            background-attachment: fixed;
+            padding-top: 65px;
+        }
+
+        nav {
+            background: linear-gradient(to top left, #c28888, #ebc2c2);
+
+        }
+        #pre{
+            max-height: 400px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow p-1 mb-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">JavaScript</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="library.html">Library</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="notes.html">Notes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contactForm.html">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="postman.html">Postman</a>
+                    </li>
+                    
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="gameHome.html">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="DND.html">Drag-drop</a>
+                    </li>
+                    
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" id="sTxt" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" id="sBtn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container h-100">
+        <div class="row justify-content-center my-3">
+            <div class="col-md-10 col-12">
+                <div class="card"  style="background-color:#fdf0f0;">
+                    <div class="card-body">
+                        <h3 class="my-3 m">Welcome to Postman</h3>
+                        <hr>
+                        <!-- url sector -->
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label" id="iUrl">URL</label>
+                            <div class="col-sm-9">
+                                <input type="url" class="form-control" id="url" placeholder="Enter URL here">
+                            </div>
+                        </div>
+
+                        <!-- Request Type -->
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label">Request Type</label>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Request" id="rGet" value="GET" checked>
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        GET
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Request" id="rPost" value="POST">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        POST
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content type -->
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label">Content Type</label>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Content" id="rJson" value="JSON" checked>
+                                    <label class="form-check-label" for="JSON">
+                                        JSON
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Content" value="Costom Parameters" id="cParameter">
+                                    <label class="form-check-label" for="cParameter">
+                                        Costom Parameters
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Parameters 1 -->
+                        <div id="Parameter1">
+                            <div class="mb-3 row">
+                                <label for="staticEmail" class="col-sm-3 col-form-label">Parameters 1</label>
+                                <div class="col-sm-4">
+                                    <input type="url" class="form-control" id="parameterKey1"
+                                        placeholder="Enter parameter 1 key">
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="url" class="form-control" id="parameterValue1"
+                                        placeholder="Enter parameter 1 value">
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-primary" id="addBtn">+</button>
+                                </div>
+                            </div>
+                            <div id="extraParameter"></div>
+                        </div>
+
+                        <!-- Enter Request Json -->
+
+                        <div id="enterRequestBox">
+                            <div class="mb-3 row">
+                                <label for="staticEmail" class="col-sm-3 col-form-label">Enter Request Json</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" id="enterRequestJson" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- submit button -->
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9">
+                                <button class="btn btn-primary" id="sbtBtn">submit</button>
+                            </div>
+                        </div>
+
+                        <!-- Response -->
+                        <div class="mb-3 row">
+                            <label for="staticEmail" class="col-sm-3 col-form-label">Response</label>
+                            <div class="col-sm-9">
+                                <!-- <textarea class="form-control" id="response" rows="3" -->
+                                    <!-- placeholder="Your response will appeare here"></textarea> -->
+                                    <pre id = "pre"class="language-javascript"><code class="language-javascrip" id="code">Your response will appear here</code></pre>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script src="/Js/postman.js"></script>
+        <script src="/Js/prism.js"></script>
+</body>
+
+</html>
